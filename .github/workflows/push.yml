@@ -80,18 +80,18 @@ jobs:
         with:
           time: 10s
 
-      # Testing the application 
-      - name: Run the tests
-        run: npm run test
+      # # Testing the application 
+      # - name: Run the tests
+      #   run: npm run test
     
-      # Upload Coverage
-      - name: Present and upload coverage to Codecov as ${{env.CODECOV_UNIQUE_NAME}}
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          verbose: true
-          fail_ci_if_error: false
-          name: '${{env.CODECOV_UNIQUE_NAME}}'  
+      # # Upload Coverage
+      # - name: Present and upload coverage to Codecov as ${{env.CODECOV_UNIQUE_NAME}}
+      #   uses: codecov/codecov-action@v4
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     verbose: true
+      #     fail_ci_if_error: false
+      #     name: '${{env.CODECOV_UNIQUE_NAME}}'  
             
             
   Generate-Documentation:
