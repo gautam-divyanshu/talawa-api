@@ -11,6 +11,8 @@ export default defineConfig({
     // More info here https://vitest.dev/config/#globalsetup
     globalSetup: ["./tests/helpers/globalSetup.ts"],
 
+    exclude: ["**/node_modules/**", "**/Mutation/**", "**/Query/**"],
+
     coverage: {
       // This tells vitest to include all files from ./src in test coverage.
       all: true,
@@ -36,6 +38,8 @@ export default defineConfig({
         "src/**/index.ts",
         "src/utilities/sample_data/*",
         "src/utilities/loadSampleData.ts",
+        "src/resolvers/Mutation/*",
+        "src/resolvers/Query/*",
       ],
 
       // This is used to tell vitest which coverage provider to use. c8 is the newer and
