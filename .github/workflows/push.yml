@@ -14,7 +14,7 @@ name: Push Workflow
 on:
   push:
     branches:
-      - '**'
+      - develop
       
 env:
     CODECOV_UNIQUE_NAME: CODECOV_UNIQUE_NAME-${{ github.run_id }}-${{ github.run_number }}
