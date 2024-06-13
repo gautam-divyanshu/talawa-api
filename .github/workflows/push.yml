@@ -211,13 +211,14 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          cd talawa-docs
-          git add .
-          if git commit -m "Update documentation from talawa-api"; then
-            git push origin develop
-          else
-            echo "No changes to commit"
-
+              cd talawa-docs
+              git add .
+              if git commit -m "Update documentation from talawa-api"; then
+                git push origin develop
+              else
+                echo "No changes to commit"
+        env:
+          GH_TOKEN: ${{ secrets.TALAWA_DOCS_SYNC }}
 
   
   # Copy-docs-to-talawa-docs:
