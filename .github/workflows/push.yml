@@ -188,7 +188,7 @@ jobs:
             git config --global user.email "${{env.email}}"
       - name: Copy Documentation Files
         run: |
-          cp -r talawa-api-docs/* talawa-docs/docs/talawa-api-docs/
+          cp -r talawa-api/talawa-api-docs/* docs/talawa-api-docs/
 
       - name: Commit and Push Changes
         run: |
